@@ -1,2 +1,5 @@
-# reformer_kg_mark_tools
-数据标记工具 做知识提取
+# flask websocket demo
+
+
+更多说明
+https://www.terrychan.org/flask_io_demo/
