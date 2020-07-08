@@ -1,7 +1,7 @@
 from flask_socketio import SocketIO, emit
 from flask import Flask, render_template, request, json, Response, jsonify,escape
 from libs import *
-
+import time
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -19,7 +19,9 @@ def demo(message):
     """
     print('message',message)
     keyword = message.get('data')
-    emit('demo response', {'data': 11111})
+    while  True:
+        emit('demo response', {'data': time.time()})
+        time.sleep(1)
 
 
 if __name__ == "__main__":
