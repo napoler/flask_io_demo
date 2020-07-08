@@ -12,6 +12,23 @@
         <style>
      
         </style>
+
+
+<script type="text/javascript">
+    var socket = io.connect('http://' + document.domain + ':' + location.port + '/tapi');
+    $(function () {
+      // socket.emit('下一句预测',{start:text.slice(-20),keywords:text.slice(-20)});
+      socket.on('预测摘要', function (msg) {
+
+
+      })
+
+
+    })
+
+</script>
+
+
     </head>
     <body>
         <div id="layout">
