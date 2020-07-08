@@ -12,13 +12,14 @@ def index():
     return render_template("index.html")
 
 
-@socketio.on('预测标题', namespace='/tapi')
-def json_search(message):
+@socketio.on('demo', namespace='/tapi')
+def demo(message):
     """
     构建训练数据
     """
     print('message',message)
     keyword = message.get('data')
+    emit('demo response', {'data': 11111})
 
 
 if __name__ == "__main__":
